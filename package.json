@@ -1,13 +1,24 @@
 {
-  "name": "mood-changer",
+  "name": "aura-player",
   "version": "1.0.0",
   "description": "A Simple Recommendation Application based on your current mood.",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "8.11.4",
+    "npm": "5.6.0"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruvp-8/aura-player.git"
   },
   "author": "Dhruv Patel",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhruvp-8/aura-player/issues"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "*",
