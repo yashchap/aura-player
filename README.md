@@ -1,7 +1,6 @@
-# Title
-AuraPlayer: Mood based playlist generator
+## AuraPlayer: Mood based playlist generator
 
-## Project
+## Introduction
 
 
 ### Prerequisites
