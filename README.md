@@ -28,6 +28,8 @@ Creators:
 
 ## Output
 
+![Walkthrough](https://media.giphy.com/media/dJQUmfBnL19C8mg5bR/giphy.gif "Walkthrough")
+
 
 ## Running the tests
 
