@@ -4,6 +4,7 @@ var path = require('path');
 var morgan = require('morgan');
 var bodyParser = require('body-parser')
 var cors = require('cors');
+var request = require('request');
 
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
@@ -13,7 +14,21 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 
+var client_id = 'bf27c5f5bc10442ca648025491f6f95f'; // Your client id
+var client_secret = '3135b95015a64106b137bf25305772a4';
+
 var port = process.env.PORT || 5000;
+
+var authOptions = {
+  url: 'https://accounts.spotify.com/api/token',
+  headers: {
+    'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
+  },
+  form: {
+    grant_type: 'client_credentials'
+  },
+  json: true
+};
 
 app.use(cors())
 app.use(bodyParser.json());
@@ -77,6 +92,18 @@ app.post('/process', function(req,res){
 	   	}
 	    
 	  
+	});
+});
+
+
+app.get('/token', function(req, res){
+	request.post(authOptions, function(error, response, body) {
+	  if (!error && response.statusCode === 200) {
+
+	    // use the access token to access the Spotify Web API
+	    var token = body.access_token;
+	    res.json({'access_token': token});
+	  }
 	});
 });
 

@@ -100,22 +100,12 @@ function processData(){
 				}
 				console.log(score)
 				$.ajax({
-					url: 'https://accounts.spotify.com/api/token',
-					dataType: 'x-www-form-urlencoded',
-					type: 'post',
-					headers: {
-						'Accept': '*',
-	        			'Content-Type': 'application/x-www-form-urlencoded',
-	        			'Authorization': "Basic YmYyN2M1ZjViYzEwNDQyY2E2NDgwMjU0OTFmNmY5NWY6MzEzNWI5NTAxNWE2NDEwNmIxMzdiZjI1MzA1NzcyYTQ="
-	            	},
-	            	data: JSON_to_URLEncoded(t),
+					url: '/token',
+					type: 'get',
 					success: function(res){
-						
-					},
-					error: function(err){
-						console.log("Hello")
-						x = JSON.parse(err.responseText)
-						console.log(x.access_token);
+						//console.log("Hello")
+						//x = JSON.parse(err.responseText)
+						console.log(res.access_token);
 						var genre = ''
 						if(score >= 0 && score <= 0.25){
 							genre = 'chill'
@@ -142,7 +132,7 @@ function processData(){
 							headers: {
 								'Accept': '*',
 			        			'Content-Type': 'application/json',
-			        			'Authorization': "Bearer " + x.access_token
+			        			'Authorization': "Bearer " + res.access_token
 			            	},
 							success: function(res){
 								console.log(res)
@@ -152,6 +142,8 @@ function processData(){
 								console.log(err)			
 							}
 						});
+					},
+					error: function(err){
 
 					}
 				});
