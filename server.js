@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var morgan = require('morgan');
 var bodyParser = require('body-parser')
+var cors = require('cors');
 
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
@@ -12,8 +13,9 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/'));
