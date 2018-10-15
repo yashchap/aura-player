@@ -1,4 +1,7 @@
 ## AuraPlayer: Mood based playlist generator
+
+![Alt text](https://github.com/dhruvp-8/aura-player/blob/master/screenshots/Auraplayer_1.png "Home screen")
+
 Creators:
 
 1. Dhruv Patel: Spotify API integration module
