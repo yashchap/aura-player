@@ -1,6 +1,6 @@
 ## AuraPlayer: Mood based playlist generator
 
-![Alt text](https://github.com/dhruvp-8/aura-player/blob/master/screenshots/Auraplayer_1.png "Home screen")
+![Logo](https://github.com/dhruvp-8/aura-player/blob/master/screenshots/Logo.png "Logo")
 
 Creators:
 
