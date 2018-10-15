@@ -31,16 +31,19 @@
   	<script src="./js/pnotify.custom.js"></script>
   	<body>
   		<div class="s01">
+  			
   			<form id="form-element" >
   				<fieldset>
   					<h1 style="font-family: 'Monoton', cursive;text-align: center;"><legend>Aura Player</legend></h1>
   				</fieldset>
 	      		<div class="inner-form">
 		          	<div class="input-field first-wrap" style="margin-right: 0px; margin-left: 10px">
-		            	<div id="sptext" style="background-color: white;padding: 10px;height: 74px; font-size: 30px; max-width: 971px; overflow: auto;" contenteditable="true"></div>
+		            	<div id="sptext" style="background-color: white;padding: 10px;height: 74px; font-size: 30px; max-width: 971px; overflow: auto;" contenteditable="false">
+		   				</div>
 		          	</div>
 		          	<div class="inner-field second-wrap" id="micro-div" style="margin-top: 5px;">
-		          		<div class="fa fa-microphone" onclick="startConverting()" style="font-size:45px; background-color: white; color:black; cursor: pointer; height: 74px; padding-top: 15px; padding-left: 20px; padding-right: 20px"></div>
+		          		<div class="fa fa-microphone" onclick="startConverting()" style="font-size:45px; background-color: white; color:black; cursor: pointer; height: 74px; padding-top: 15px; padding-left: 20px; padding-right: 20px">
+		          		</div>
 		          	</div>
 		          	<div class="input-field third-wrap" style="margin-left: 10px;">
 		          		<div class="btn animated slideInTop" onclick="processData()" style="background-color: #eee; padding-top: 20px; cursor: pointer; color: green; height: 74px; width: 74px; font-size: 30px"><i class="fa fa-thumbs-up"></i></div>
@@ -52,9 +55,8 @@
         	<div id="recommend" style="margin-top: 200px">
                 
             </div>
-	    	
-        </div>
-        
+	    
+	    </div>
     	<script src = "./js/speech-to-text.js"></script>
   	</body>
 </html>
