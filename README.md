@@ -1,4 +1,10 @@
 ## AuraPlayer: Mood based playlist generator
+Creators:
+
+1. Dhruv Patel: Spotify API integration module
+2. Yash Shah: IBM Watson NLU API module
+3. Santhosh Narayanan: Web Application and UI designing
+4. Yash Patel: Web Application and UI designing
 
 ## Introduction
 * The system was built during University of Southern California, ACM TrojanHacks held on 14-15th October 2018. 
